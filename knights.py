@@ -23,6 +23,7 @@ def house():
     his smile exposing his missing and decaying teeth.
     would you like to stay and solve the riddle? (yes,no)''' % choice(greet)
     answer = raw_input('> ')
+    answer = answer.lower()
     a = '''
     "Fine!  Riddle me this:
     The answer to this riddle is either True or False! 
@@ -35,7 +36,7 @@ def house():
     if answer == 'yes':
        print a
        riddle = raw_input("> ")
-
+       riddle = riddle.title()
        if riddle == "False" :
            print b
            my_hero.potion()
@@ -120,6 +121,12 @@ def start():
 #possibility 3
 
 print '''
+ _          _       _     _                        _           
+| | ___ __ (_) __ _| |__ | |_ ___   _ __ ___  __ _| |_ __ ___  
+| |/ / '_ \| |/ _` | '_ \| __/ __| | '__/ _ \/ _` | | '_ ` _ \ 
+|   <| | | | | (_| | | | | |_\__ \ | | |  __/ (_| | | | | | | |
+|_|\_\_| |_|_|\__, |_| |_|\__|___/ |_|  \___|\__,_|_|_| |_| |_|
+              |___/                                            
     Hello!  Wecome to knights Realm!
     What is your name?
     '''
